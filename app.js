@@ -37,7 +37,6 @@ app.get('/todos/search/:keyword', (req, res) => {
 
 // Retrieve todo with id
 app.get('/todo/:id', (req, res) => {
-
   let task_id = req.params.id;
 
   mc.query('SELECT * FROM tasks where id=?', task_id, (error, results, fields) => {
@@ -63,7 +62,6 @@ app.post('/todo', (req, res) => {
 
 //  Update todo with id
 app.put('/todo', function (req, res) {
-
   let task_id = req.body.task_id;
   let task = req.body.task;
 
